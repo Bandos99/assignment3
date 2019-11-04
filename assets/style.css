@@ -1,6 +1,12 @@
 
 
-
+    .container{
+    background-color:whitesmoke;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 5px;
+   
+}
 
 header {
     font-size: 24px;
@@ -16,6 +22,7 @@ h2 {text-align: center;}
 
 
 .content-header {
+    background-color: #8eafd1;
     font-size: 20px;
     border-bottom: 2px solid grey;
 }
@@ -40,7 +47,7 @@ padding-bottom: 100px;}
 }
 
 #getpass{
-    background-color: #af0808;
+    background-color: #05ac05;
     width: 28%;
     border-radius: 30px;
     color: white;
@@ -50,7 +57,7 @@ padding-bottom: 100px;}
 }
 
 #copyclip {
-    background-color: #c0c7cf;
+    background-color: #3f94f5;
     flex-grow: 1;
     width: 28%;
     border-radius: 30px;
@@ -75,12 +82,4 @@ padding-bottom: 100px;}
   {
       text-align: center;
   }
-
-  .container{
-    background-color:whitesmoke;
-    margin-bottom: 20px;
-    width: 100%;
-    padding: 5px;
-   
-}
 

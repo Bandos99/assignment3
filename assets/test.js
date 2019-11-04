@@ -1,5 +1,5 @@
 
-    alert("please tick one of the boxes below");
+ alert("please tick one of the boxes below");
     var generate= document.querySelector("#getpass");
     var clipboard= document.querySelector("#copyclip");
     var box1= document.querySelector("#con1");
@@ -11,58 +11,38 @@ function password () {
     var alphabets = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
         var charac = '!"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~';
         var result = '';
-        var choices= alphabets + charac;
-        var charCount = Math.floor(Math.random()*(128-8) + 8);
-        
-        // conditional if of the selections
-        if (box1.checked) {
-            for(var i = 0; i<charCount;i++){  
+        var mixedchar= alphabets + charac;
+        var charCount = Math.floor(Math.random() *(128-8) +8);
 
-                result += alphabets[Math.floor(Math.random()*(alphabets.length))]
-                 }
-                 document.querySelector('#password').value = result;
-                }
-
-
-                if (box2.checked) {
-                    for(var i = 0; i<charCount;i++){  
-
-                        result += choices[Math.floor(Math.random()*(choices.length))]
-                         }
-                         document.querySelector('#password').value = result;
-                }
-
-              
-        }
-        
-
-        generate.addEventListener("click", password);
-
-// copy to clipboard function
-        function copy() {
-            document.querySelector("#password").select();
-            document.execCommand("Copy");
-            alert("you have copied your password");
-        
+    // conditions
     
+    if (box1.checked)
+        // cycle through random numbers between 128-1 (charcount)
+        for(var i = 0; i<charCount;i++){
+            //combine random numbers with random letters 
+            result += alphabets[Math.floor(Math.random()*alphabets.length))]
         }
-    
+            document.querySelector('#password').value = result;
+    }
+    if (box2.checked)
+       for(var i = 0; i<charCount;i++){
+           
+           result += mixedchar[Math.floor(Math.random()*mixedchar.length))]
+       }
+           document.querySelector('#password').value = result;
+    }
+
+    // Listen for user click and apply function
+
+    generate.addEventListener("click", password);
+
+    // copy to clipboard
+
+    function copy(){
+        document.querySelector("#password").select();
+        document.execCommand("Copy");
+        alert("you have copied your password to the clipboard");
+
+    }
         clipboard.addEventListener("click",copy);
-    
-
-
-
-    
-            
-
-
-
-
-
-
-
-
-     
-    
-
 
